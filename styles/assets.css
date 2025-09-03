@@ -1,0 +1,18 @@
+/***** Photo gallery small preview *****/
+
+.photo_gallery_small_preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.single-door{
+    width: 120px;
+    height: 120px;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin: 8px;
+}
