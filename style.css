@@ -36,8 +36,13 @@ h1 {
   padding-right: 20px;
 }
 
+.padding_left_right_80 {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
 .padding_top_60 {
-    padding-top: 60px;
+  padding-top: 60px;
 }
 
 /***** Footer *****/
