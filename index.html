@@ -9,11 +9,25 @@
     <script src="./scripts/templates.js"></script>
     <script src="./script.js"></script>
 
+    <link rel="stylesheet" href="./styles/fonts.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>Hallo</h1>
+  <body onload="init()">
+    <header class="padding_left_right_20">
+      <img src="./assets/img/Fotogram_Logo.svg" alt="Fotogram Logo" />
+    </header>
+
+    <main>
+      <h1 class="padding_top_60">Your personal photo album</h1>
+
+
+    <div id="photo_gallery_small_preview" class="photo_gallery_small_preview padding_left_right_80">
+    </div>
+
+    </main>
+
+    <footer></footer>
   </body>
 </html>
