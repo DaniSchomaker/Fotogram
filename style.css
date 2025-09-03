@@ -1,0 +1,48 @@
+/***** Header *****/
+
+header {
+  height: 100px; /* ???  */
+  background-color: rgba(8, 33, 41, 1);
+  display: flex;
+}
+
+header img {
+  width: 250px;
+  object-fit: contain;
+}
+
+/***** Body/Main/headings *****/
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background-color: rgba(5, 23, 31, 1);
+  color: white;
+  flex: 1;
+}
+
+h1 {
+  text-align: center;
+}
+
+/***** Paddings *****/
+
+.padding_left_right_20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padding_top_60 {
+    padding-top: 60px;
+}
+
+/***** Footer *****/
+
+footer {
+  background-color: rgba(8, 33, 41, 1);
+  height: 100px; /* ???  */
+}
