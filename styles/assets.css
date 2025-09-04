@@ -1,18 +1,88 @@
-/***** Photo gallery small preview *****/
+/***** Forogallerie mit kleinen Vorschaubildern *****/
 
-.photo_gallery_small_preview {
+.photo_preview_gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 
-.single-door{
-    width: 120px;
-    height: 120px;
-    background-color: crimson;
+.photo_preview{
+    width: 160px;
+    height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    margin: 8px;
+    border-radius: 16px;
+    border: 3px solid rgba(33, 33, 33, 1);
+    overflow: hidden; /* Bild bleibt im Rahmen */
 }
+
+.photo_preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-color: rgba(8, 33, 41, 1); */
+    border-radius: 16px;
+} 
+
+.photo_preview img:hover {
+    cursor: pointer;
+    border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.photo_preview img,
+.icon_lightbox:active {
+  transform: scale(0.95);
+}
+
+
+/***** Dialog/Lightbox *****/
+
+.lightbox {
+    background-color: rgba(33,33,33,1);
+    margin: auto; /* richtet die Lightbox mittig auf der Seite aus */
+    border-radius: 16px;
+    border: 3px solid white;
+    padding: 20px;
+    max-width: 90%; /* NICHT vw! damit es auf Smartphone funktioniert ??? */
+    color: white;
+}
+
+
+
+.header_lightbox{
+    /* background-color: transparent; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.photo_lightbox {
+    max-width: 100%;  /* für sehr breite Bilder, damit diese nicht über den Dialog hinausragen */
+    max-height: 50vh; /* höchstens die Hälfte der Bildschirmhöhe */
+    height: auto;
+    display: block; /* verhindert die horizontale weiße Linie unter dem Bild */
+    /* margin: 0 auto; zentriert in der Lightbox */
+}
+
+.footer_lightbox{
+    /* background-color: transparent;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon_lightbox {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+
+}
+
+.photo_number {
+    font-size: 22px;
+}
+
