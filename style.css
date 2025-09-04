@@ -4,6 +4,8 @@ header {
   height: 100px; /* ???  */
   background-color: rgba(8, 33, 41, 1);
   display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 header img {
@@ -27,23 +29,12 @@ main {
 
 h1 {
   text-align: center;
-}
-
-/***** Paddings *****/
-
-.padding_left_right_20 {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.padding_left_right_80 {
-  padding-left: 80px;
-  padding-right: 80px;
-}
-
-.padding_top_60 {
   padding-top: 60px;
+  padding-bottom: 20px;
 }
+
+
+
 
 /***** Footer *****/
 
