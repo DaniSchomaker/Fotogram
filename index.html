@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="./assets/icons/favicon.png" />
 
     <script src="./scripts/templates.js"></script>
-    <script src="./script.js"></script>
 
     <link rel="stylesheet" href="./styles/fonts.css" />
     <link rel="stylesheet" href="./styles/standard.css" />
@@ -22,12 +21,32 @@
     <main>
       <h1>Your personal photo album</h1>
 
+      <div id="photoPreviewGallery" class="photo_preview_gallery"></div>
 
-    <div id="photo_gallery_small_preview" class="photo_gallery_small_preview">
-    </div>
+      <!-- ??? Ist das eine einheitliche Bezeichnung? Sieht für mich komisch aus -->
 
+      <dialog id="lightbox" class="lightbox">
+        <header class="header_lightbox">
+          <h2>Meine Lightbox</h2>
+          <button onclick="closeLightbox()">
+            <img src="./assets/icons/Icon_X_ChatGPT.png" alt="Schließen-Button" class="icon_lightbox">
+          </button>
+        </header>
+        <section id="photoLightbox">
+        </section>
+        <footer class="footer_lightbox">
+          <button>
+            <img src="./assets/icons/Icon_Pfeil_links_ChatGPT.png" alt="Navigationspfeil: ein Foto zurück" class="icon_lightbox">
+          </button>
+          <span class="photo_number">42/42</span>
+          <button>
+            <img src="./assets/icons/Icon_Pfeil_rechts_ChatGPT.png" alt="Navigationspfeil: ein Foto weiter" class="icon_lightbox">
+          </button>
+        </footer>
+      </dialog>
     </main>
 
     <footer></footer>
+    <script src="./script.js"></script>
   </body>
 </html>
