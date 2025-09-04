@@ -2,7 +2,7 @@
 
 header {
   height: 100px; /* ???  */
-  background-color: rgba(8, 33, 41, 1);
+  background-color: rgba(33, 33, 33, 1);
   display: flex;
   padding-left: 20px;
   padding-right: 20px;
@@ -22,7 +22,7 @@ body {
 }
 
 main {
-  background-color: rgba(5, 23, 31, 1);
+  background-color: rgba(23, 23, 23, 1);
   color: white;
   flex: 1;
 }
@@ -33,12 +33,18 @@ h1 {
   padding-bottom: 20px;
 }
 
-
-
+h2 {
+  font-size: 24px;
+}
 
 /***** Footer *****/
 
-footer {
-  background-color: rgba(8, 33, 41, 1);
+/* .website_footer {
+  background-color: rgba(33, 33, 33, 1);
   height: 100px; /* ???  */
+/* }  */
+
+footer {
+  background-color: rgba(33, 33, 33, 1);
+  height: 100px;
 }
