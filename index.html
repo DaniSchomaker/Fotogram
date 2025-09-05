@@ -23,26 +23,40 @@
 
       <div id="photoPreviewGallery" class="photo_preview_gallery"></div>
 
-      <!-- ??? Ist das eine einheitliche Bezeichnung? Sieht für mich komisch aus -->
+      <!-- ??? Bezeichnung? -->
 
-      <dialog id="lightbox" class="lightbox">
-        <header class="header_lightbox">
-          <h2>Meine Lightbox</h2>
-          <button onclick="closeLightbox()">
-            <img src="./assets/icons/Icon_X_ChatGPT.png" alt="Schließen-Button" class="icon_lightbox">
-          </button>
-        </header>
-        <section id="photoLightbox">
-        </section>
-        <footer class="footer_lightbox">
-          <button>
-            <img src="./assets/icons/Icon_Pfeil_links_ChatGPT.png" alt="Navigationspfeil: ein Foto zurück" class="icon_lightbox">
-          </button>
-          <span class="photo_number">42/42</span>
-          <button>
-            <img src="./assets/icons/Icon_Pfeil_rechts_ChatGPT.png" alt="Navigationspfeil: ein Foto weiter" class="icon_lightbox">
-          </button>
-        </footer>
+      <dialog id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <!-- onclick: egal, wo ich drücke, es wird überall geschlossen, wegen dem Bubbling (Ebenen) -->
+        <div onclick="closeLightboxBubblingProtection(event)">
+          <header class="header_lightbox">
+            <h2>Meine Lightbox</h2>
+            <button onclick="closeLightbox()">
+              <img
+                src="./assets/icons/Icon_X_ChatGPT.png"
+                alt="Schließen-Button"
+                class="icon_lightbox"
+              />
+            </button>
+          </header>
+          <section id="photoLightbox"></section>
+          <footer class="footer_lightbox">
+            <button>
+              <img
+                src="./assets/icons/Icon_Pfeil_links_ChatGPT.png"
+                alt="Navigationspfeil: ein Foto zurück"
+                class="icon_lightbox"
+              />
+            </button>
+            <span class="photo_number">42/42</span>
+            <button>
+              <img
+                src="./assets/icons/Icon_Pfeil_rechts_ChatGPT.png"
+                alt="Navigationspfeil: ein Foto weiter"
+                class="icon_lightbox"
+              />
+            </button>
+          </footer>
+        </div>
       </dialog>
     </main>
 

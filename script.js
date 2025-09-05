@@ -49,17 +49,18 @@ const lightboxRef = document.getElementById("lightbox");
 
 function openLightbox(i) {
   const lightboxRef = document.getElementById("lightbox");
-  const photoLightbox = document.getElementById("photoLightbox"); 
+  const photoLightbox = document.getElementById("photoLightbox");
 
   // Statt Inline-HTML jetzt Template verwenden
   photoLightbox.innerHTML = getPhotoLightboxTemplate(i);
 
   lightboxRef.showModal(); // .showModal = Dialog/Lightbox wird geöffnet
-
-
-
 }
 
 function closeLightbox() {
   lightboxRef.close();
+}
+
+function closeLightboxBubblingProtection(event) { 
+  event.stopPropagation(); // bei den Event "click" wird der Bubbling-Effekt (also das Durchgreifen auf die unteren Ebenen) vermieden
 }
