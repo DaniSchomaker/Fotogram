@@ -30,6 +30,8 @@ const photosAlt = [
   "Alt13",
 ];
 
+let currentPhotoIndex = 0; // wird unten für das Durchklicken der Fotos benötigt, der Wert wird später überschrieben
+
 function init() {
   renderPhotoPreviewGallery();
 }
@@ -43,24 +45,52 @@ function renderPhotoPreviewGallery() {
   }
 }
 
-// Lightbox (= Dialog) öffnen/schließen
+//////////////////// Lightbox (= Dialog) öffnen/schließen
 
-const lightboxRef = document.getElementById("lightbox");
+const lightboxRef = document.getElementById("lightbox"); // das muss eine globale Variable sein, da mehrere Funktionen darauf zugreifen
 
 function openLightbox(i) {
-  const lightboxRef = document.getElementById("lightbox");
-  const photoLightbox = document.getElementById("photoLightbox");
-
-  // Statt Inline-HTML jetzt Template verwenden
-  photoLightbox.innerHTML = getPhotoLightboxTemplate(i);
+  // const lightboxRef = document.getElementById("lightbox"); // das vielleicht eine globale Variable sein?
+  // const photoLightbox = document.getElementById("photoLightbox");
+  // const footerLightbox = document.getElementById("footerLightbox");
+  currentPhotoIndex = i;
+  renderLightbox();
 
   lightboxRef.showModal(); // .showModal = Dialog/Lightbox wird geöffnet
+}
+
+function renderLightbox() {
+  const photoLightbox = document.getElementById("photoLightbox");
+  const footerLightbox = document.getElementById("footerLightbox");
+
+  photoLightbox.innerHTML = getPhotoLightboxTemplate(currentPhotoIndex);
+  footerLightbox.innerHTML = getFooterLightboxTemplate(currentPhotoIndex);
 }
 
 function closeLightbox() {
   lightboxRef.close();
 }
 
-function closeLightboxBubblingProtection(event) { 
+function closeLightboxBubblingProtection(event) {
   event.stopPropagation(); // bei den Event "click" wird der Bubbling-Effekt (also das Durchgreifen auf die unteren Ebenen) vermieden
+}
+
+// Buttons vorheriges bzw. nächstes Foto
+
+function showPreviousPhoto() {
+  if (currentPhotoIndex > 0) {
+    currentPhotoIndex--;
+  } else {
+    currentPhotoIndex = photos.length - 1; // zum letzten Bild springen
+  }
+  renderLightbox();
+}
+
+function showNextPhoto() {
+  if (currentPhotoIndex < photos.length - 1) {
+    currentPhotoIndex++;
+  } else {
+    currentPhotoIndex = 0; // zum ersten Bild springen
+  }
+  renderLightbox();
 }
