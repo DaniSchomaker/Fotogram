@@ -1,7 +1,7 @@
 /***** Header *****/
 
 header {
-  height: 100px; /* ???  */
+  height: 120px; /* ???  */
   background-color: rgba(33, 33, 33, 1);
   display: flex;
   padding-left: 20px;
@@ -37,6 +37,10 @@ h2 {
   font-size: 24px;
 }
 
+/* p {
+  font-size: 18px;
+} */
+
 /***** Footer *****/
 
 /* .website_footer {
@@ -46,5 +50,29 @@ h2 {
 
 footer {
   background-color: rgba(33, 33, 33, 1);
-  height: 100px;
+  color: rgba(255, 255, 255, 0.6);
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+/***** Queries *****/
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  .icon_lightbox {
+  height: 30px;
+  width: 30px;
+}
+
+.photo_number {
+  font-size: 18px;
+}
 }
