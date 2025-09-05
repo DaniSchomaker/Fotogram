@@ -50,7 +50,7 @@ function renderPhotoPreviewGallery() {
 const lightboxRef = document.getElementById("lightbox"); // das muss eine globale Variable sein, da mehrere Funktionen darauf zugreifen
 
 function openLightbox(i) {
-  // const lightboxRef = document.getElementById("lightbox"); // das vielleicht eine globale Variable sein?
+  // const lightboxRef = document.getElementById("lightbox"); // muss das vielleicht eine globale Variable sein? --> JA
   // const photoLightbox = document.getElementById("photoLightbox");
   // const footerLightbox = document.getElementById("footerLightbox");
   currentPhotoIndex = i;
@@ -60,9 +60,11 @@ function openLightbox(i) {
 }
 
 function renderLightbox() {
+  const headerLightbox = document.getElementById("headerLightbox");
   const photoLightbox = document.getElementById("photoLightbox");
   const footerLightbox = document.getElementById("footerLightbox");
 
+  headerLightbox.innerHTML = getHeaderLightboxTemplate(currentPhotoIndex);
   photoLightbox.innerHTML = getPhotoLightboxTemplate(currentPhotoIndex);
   footerLightbox.innerHTML = getFooterLightboxTemplate(currentPhotoIndex);
 }

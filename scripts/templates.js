@@ -8,6 +8,17 @@ function getPhotoPreviewGalleryTemplate(i) {
 }
 
 // BIG Photo-Template Lightbox
+function getHeaderLightboxTemplate(i) {
+    return `
+        <h2>${photosAlt[i]}</h2>
+        <button onclick="closeLightbox()">
+        <img src="./assets/icons/Icon_X_ChatGPT.png" alt="Schließen-Button" class="icon_lightbox" />
+        </button>
+    `;
+}
+
+
+
 function getPhotoLightboxTemplate(i) {
   return `
         <img src="${photos[i]}" alt="${photosAlt[i]}" class="photo_lightbox">
