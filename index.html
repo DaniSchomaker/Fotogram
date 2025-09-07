@@ -13,33 +13,40 @@
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="init()">
+  <body onload="init()"> <!-- ??? raus, da nur eine Funktion enthalten? -->
     <header>
-      <img src="./assets/img/Fotogram_Logo.svg" alt="Fotogram Logo" />
+      <div class="content_container">
+        <img src="./assets/img/Fotogram_Logo.svg" alt="Fotogram Logo" />
+      </div>
     </header>
 
     <main>
-      <h1>Heavy Beats im Ruhrgebiet</h1>
+      <div class="content_container">
+        <h1>Heavy Beats im Ruhrgebiet</h1>
 
-      <div id="photoPreviewGallery" class="photo_preview_gallery"></div>
+        <div id="photoPreviewGallery" class="photo_preview_gallery"></div>
 
-      <!-- ??? Bezeichnung? -->
+        <!-- ??? Bezeichnung? -->
 
-      <dialog id="lightbox" class="lightbox" onclick="closeLightbox()"> <!-- onclick: egal, wo ich drücke, es wird überall geschlossen, wegen dem Bubbling (Ebenen) -->
-        <div onclick="closeLightboxBubblingProtection(event)"> 
-          <header id="headerLightbox" class="header_lightbox">
-          </header>
-          <section id="photoLightbox"></section>
-          <footer id="footerLightbox" class="footer_lightbox">
-          </footer>
-        </div>
-      </dialog>
+        <dialog id="lightbox" class="lightbox" onclick="closeLightbox()">
+          <!-- onclick: egal, wo ich drücke, es wird überall geschlossen, wegen dem Bubbling (Ebenen), nächste Zeile: WIRD AUSGESCHALTET -->
+          <div onclick="closeLightboxBubblingProtection(event)">
+            <header id="headerLightbox" class="header_lightbox"></header>
+            <section id="photoLightbox"></section>
+            <footer id="footerLightbox" class="footer_lightbox"></footer>
+          </div>
+        </dialog>
+      </div>
     </main>
 
     <footer>
-      <p>© 2025 – Fotos 1-4, 13: Dani Schomaker (eigene Aufnahmen)  
-    | <br>Fotos 5-12: Heike Leppkes Konzertfotos (mit freundlicher Genehmigung)
-      </p>
+      <div class="content_container">
+        <p>
+          © 2025 – Fotos 1-4, 13: Dani Schomaker (eigene Aufnahmen) |
+          <br />Fotos 5-12: Heike Leppkes Konzertfotos (mit freundlicher
+          Genehmigung)
+        </p>
+      </div>
     </footer>
     <script src="./script.js"></script>
   </body>
