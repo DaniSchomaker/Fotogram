@@ -15,6 +15,9 @@ a {
 }
 
 button {
-  all: unset; /* setzt ALLE Browser-Styles zurück */
+  /* all: unset;  --> geht nicht, da dann auch der FOKUS (Tab) rausgenommen wird */
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer; 
 }
