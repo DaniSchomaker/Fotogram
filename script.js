@@ -30,7 +30,8 @@ const PHOTOS_ALT = [
 
 let currentPhotoIndex = 0; // wird unten für das Durchklicken der Fotos benötigt, der Wert wird später überschrieben
 
-// 
+///// Photo Preview Gallery /////
+
 function renderPhotoPreviewGallery() {
   let photoPreviewGallery = document.getElementById("photo_preview_gallery");
   photoPreviewGallery.innerHTML = ""; // brauche ich die Leerung???
@@ -40,17 +41,13 @@ function renderPhotoPreviewGallery() {
   }
 }
 
-//////////////////// Lightbox (= Dialog) öffnen/schließen
+///// Lightbox /////
 
 const lightboxRef = document.getElementById("lightbox"); // das muss eine globale Variable sein, da mehrere Funktionen darauf zugreifen
 
 function openLightbox(i) {
-  // const lightboxRef = document.getElementById("lightbox"); // muss das vielleicht eine globale Variable sein? --> JA
-  // const photoLightbox = document.getElementById("photo_lightbox");
-  // const footerLightbox = document.getElementById("footer_Lightbox");
   currentPhotoIndex = i;
   renderLightbox();
-
   lightboxRef.showModal(); // .showModal = Dialog/Lightbox wird geöffnet
 }
 
@@ -72,7 +69,7 @@ function closeLightboxBubblingProtection(event) {
   event.stopPropagation(); // bei den Event "click" wird der Bubbling-Effekt (also das Durchgreifen auf die unteren Ebenen) vermieden
 }
 
-// Buttons vorheriges bzw. nächstes Foto
+///// Buttons: previous/next photo /////
 
 function showPreviousPhoto() {
   if (currentPhotoIndex > 0) {
