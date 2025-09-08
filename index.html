@@ -27,11 +27,9 @@
         <div id="photo_preview_gallery" class="photo_preview_gallery"></div>
 
         <dialog id="lightbox" class="lightbox" onclick="closeLightbox()">
-          <!-- onclick: egal, wo ich drücke, es wird überall geschlossen, wegen dem Bubbling (Ebenen), nächste Zeile: WIRD AUSGESCHALTET -->
           <div onclick="closeLightboxBubblingProtection(event)">
             <header id="header_lightbox" class="header_lightbox"></header>
             <section id="photo_lightbox" class="photo_lightbox"></section>
-            <!-- Hier hatte ich noch die Klasse eingefügt -->
             <footer id="footer_lightbox" class="footer_lightbox"></footer>
           </div>
         </dialog>
@@ -42,8 +40,9 @@
       <div class="content_container">
         <p>
           © 2025 – Fotos 1-4: Dani Schomaker (eigene Aufnahmen) |
-          <br />Fotos 5-12: Heike Leppkes Konzertfotos (mit freundlicher
-          Genehmigung)
+          <br />Fotos 5-12: 
+          <a href="https://heike-leppkes-konzertfotos.de/" target="_blank"> Heike Leppkes Konzertfotos</a>
+          (mit freundlicher Genehmigung)
         </p>
       </div>
     </footer>
