@@ -37,7 +37,7 @@ main {
 
 h1 {
   text-align: center;
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 
@@ -70,5 +70,10 @@ footer a:hover {
 @media (max-width: 500px) {
   h2 {
     font-size: 18px;
+  }
+
+  .photo_lightbox {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
