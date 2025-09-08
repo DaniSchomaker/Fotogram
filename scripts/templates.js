@@ -2,7 +2,7 @@
 function getPhotoPreviewGalleryTemplate(i) {
   return `
         <div class="photo_preview">
-            <img src="${photos[i]}" alt="${photosAlt[i]}" onclick="openLightbox(${i})">
+            <img src="${PHOTOS[i]}" alt="${PHOTOS_ALT[i]}" onclick="openLightbox(${i})">
         </div>
     `;
 }
@@ -10,7 +10,7 @@ function getPhotoPreviewGalleryTemplate(i) {
 // BIG Photo-Template Lightbox
 function getHeaderLightboxTemplate(i) {
     return `
-        <h2>${photosAlt[i]}</h2>
+        <h2>${PHOTOS_ALT[i]}</h2>
         <button onclick="closeLightbox()">
         <img src="./assets/icons/Icon_X_ChatGPT.png" alt="Schließen-Button" class="icon_lightbox" />
         </button>
@@ -21,7 +21,7 @@ function getHeaderLightboxTemplate(i) {
 
 function getPhotoLightboxTemplate(i) {
   return `
-        <img src="${photos[i]}" alt="${photosAlt[i]}" class="photo_lightbox">
+        <img src="${PHOTOS[i]}" alt="${PHOTOS_ALT[i]}" class="photo_lightbox">
         
     `;
 }
@@ -35,7 +35,7 @@ function getFooterLightboxTemplate(i) {
             class="icon_lightbox"
         />
     </button>
-    <span class="photo_number">${i+1}/${photos.length}</span>
+    <span class="photo_number">${i+1}/${PHOTOS.length}</span>
     <button onclick="showNextPhoto()">
         <img
             src="./assets/icons/Icon_Pfeil_rechts_ChatGPT.png"
