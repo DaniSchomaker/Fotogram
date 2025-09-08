@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./styles/assets.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body onload="init()"> <!-- ??? raus, da nur eine Funktion enthalten? -->
+  <body onload="renderPhotoPreviewGallery()"> 
     <header>
       <div class="content_container">
         <img src="./assets/img/Fotogram_Logo.svg" alt="Fotogram Logo" />
@@ -24,16 +24,15 @@
       <div class="content_container">
         <h1>Heavy Beats im Ruhrgebiet</h1>
 
-        <div id="photoPreviewGallery" class="photo_preview_gallery"></div>
-
-        <!-- ??? Bezeichnung? -->
+        <div id="photo_preview_gallery" class="photo_preview_gallery"></div>
 
         <dialog id="lightbox" class="lightbox" onclick="closeLightbox()">
           <!-- onclick: egal, wo ich drücke, es wird überall geschlossen, wegen dem Bubbling (Ebenen), nächste Zeile: WIRD AUSGESCHALTET -->
           <div onclick="closeLightboxBubblingProtection(event)">
-            <header id="headerLightbox" class="header_lightbox"></header>
-            <section id="photoLightbox"></section>
-            <footer id="footerLightbox" class="footer_lightbox"></footer>
+            <header id="header_lightbox" class="header_lightbox"></header>
+            <section id="photo_lightbox" class="photo_lightbox"></section>
+            <!-- Hier hatte ich noch die Klasse eingefügt -->
+            <footer id="footer_lightbox" class="footer_lightbox"></footer>
           </div>
         </dialog>
       </div>
@@ -42,7 +41,7 @@
     <footer>
       <div class="content_container">
         <p>
-          © 2025 – Fotos 1-4, 13: Dani Schomaker (eigene Aufnahmen) |
+          © 2025 – Fotos 1-4: Dani Schomaker (eigene Aufnahmen) |
           <br />Fotos 5-12: Heike Leppkes Konzertfotos (mit freundlicher
           Genehmigung)
         </p>
