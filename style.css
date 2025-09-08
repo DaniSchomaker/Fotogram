@@ -13,7 +13,7 @@ header {
   display: flex;
   align-items: center;
   height: 120px;
-  background-color: rgba(33, 33, 33, 1);
+  background-color: var(--color-bg-dark);
 }
 
 header img {
@@ -32,7 +32,7 @@ body {
 main {
   flex: 1;
   color: white;
-  background-color: rgba(23, 23, 23, 1);
+  background-color: var(--color-bg-darker);
 }
 
 h1 {
@@ -54,7 +54,7 @@ footer {
   text-align: center;
   height: 120px;
   color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(33, 33, 33, 1);
+  background-color: var(--color-bg-dark);
 }
 
 footer a {
