@@ -88,3 +88,10 @@ function showNextPhoto() {
   }
   renderLightbox();
 }
+
+///// Fokusshift /////
+
+function setFocusOnTop() {
+  const elementRef = document.getElementById("headline");
+  elementRef.focus();
+}
