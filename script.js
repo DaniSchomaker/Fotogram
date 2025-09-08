@@ -11,33 +11,28 @@ const photos = [
   "./assets/img/IMG-20230423-WA0036.jpg",
   "./assets/img/IMG-20230423-WA0027.jpg",
   "./assets/img/IMG-20230416-WA0015.jpg",
-  "./assets/img/IMG-20230424-WA0005.jpg",
 ];
 
 const photosAlt = [
-  "Friemersheimer Mühle mit Metal Heads-Logo",
-  "Alt2",
-  "Alt3",
-  "Alt4",
-  "Alt5",
-  "Alt6",
-  "Alt7",
-  "Alt8",
-  "Alt9",
-  "Alt10",
-  "Alt11",
-  "Alt12",
-  "Alt13",
+  "Friemersheimer Mühle mit Metal-Heads-Logo",
+  "Rage against Racism-Festival 2024 in Duisburg",
+  "Rage against Racism-Festival 2025 in Duisburg",
+  "Olgas Rock-Festival 2025 in Oberhausen",
+  "ONYXSIN beim Glowing Ember Festival 2023 in Oberhausen",
+  "Jakob (ONYXSIN) beim Glowing Ember Festival 2023 in Oberhausen",
+  "Joan (ONYXSIN) beim Glowing Ember Festival 2023 in Oberhausen",
+  "Gary (ONYXSIN) beim Glowing Ember Festival 2023 in Oberhausen",
+  "Chris (ONYXSIN) beim Glowing Ember Festival 2023 in Oberhausen",
+  "ONYXSIN beim Glowing Ember Festival 2023 in Oberhausen",
+  "Joan (ONYXSIN) beim Glowing Ember Festival 2023 in Oberhausen",
+  "ONYXSIN mit Crowd beim Glowing Ember Festival 2023 in Oberhausen",
 ];
 
 let currentPhotoIndex = 0; // wird unten für das Durchklicken der Fotos benötigt, der Wert wird später überschrieben
 
-function init() {
-  renderPhotoPreviewGallery();
-}
-
+// 
 function renderPhotoPreviewGallery() {
-  let photoPreviewGallery = document.getElementById("photoPreviewGallery");
+  let photoPreviewGallery = document.getElementById("photo_preview_gallery");
   photoPreviewGallery.innerHTML = ""; // brauche ich die Leerung???
 
   for (let i = 0; i < photos.length; i++) {
@@ -51,8 +46,8 @@ const lightboxRef = document.getElementById("lightbox"); // das muss eine global
 
 function openLightbox(i) {
   // const lightboxRef = document.getElementById("lightbox"); // muss das vielleicht eine globale Variable sein? --> JA
-  // const photoLightbox = document.getElementById("photoLightbox");
-  // const footerLightbox = document.getElementById("footerLightbox");
+  // const photoLightbox = document.getElementById("photo_lightbox");
+  // const footerLightbox = document.getElementById("footer_Lightbox");
   currentPhotoIndex = i;
   renderLightbox();
 
@@ -60,9 +55,9 @@ function openLightbox(i) {
 }
 
 function renderLightbox() {
-  const headerLightbox = document.getElementById("headerLightbox");
-  const photoLightbox = document.getElementById("photoLightbox");
-  const footerLightbox = document.getElementById("footerLightbox");
+  const headerLightbox = document.getElementById("header_lightbox");
+  const photoLightbox = document.getElementById("photo_lightbox");
+  const footerLightbox = document.getElementById("footer_lightbox");
 
   headerLightbox.innerHTML = getHeaderLightboxTemplate(currentPhotoIndex);
   photoLightbox.innerHTML = getPhotoLightboxTemplate(currentPhotoIndex);
