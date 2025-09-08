@@ -22,11 +22,16 @@
 
     <main>
       <div class="content_container">
-        <h1>Heavy Beats im Ruhrgebiet</h1>
+        <h1 id="headline" tabindex="-1">Heavy Beats im Ruhrgebiet</h1>
 
         <div id="photo_preview_gallery" class="photo_preview_gallery"></div>
 
-        <dialog id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <dialog 
+          id="lightbox" 
+          class="lightbox" 
+          onclick="closeLightbox()"
+          aria-labelledby="lightbox_title"
+          >
           <div onclick="closeLightboxBubblingProtection(event)">
             <header id="header_lightbox" class="header_lightbox"></header>
             <section id="photo_lightbox" class="photo_lightbox"></section>
