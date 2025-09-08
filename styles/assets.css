@@ -13,8 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   border: 3px solid var(--color-bg-dark);
   border-radius: 16px;
   overflow: hidden; /* Foto bleibt im Rahmen */
@@ -37,11 +37,18 @@
   transform: scale(0.95);
 }
 
+/* .photo_preview_btn {
+  all: unset;           
+  display: flex;
+  cursor: pointer;
+} */
+
+
 /***** Dialog/Lightbox *****/
 
 .lightbox {
-  width: 900px;
-  max-width: 90%; /* NICHT vw! damit es auf Smartphone funktioniert ??? */
+  width: 600px;
+  max-width: 95%; /* NICHT vw! damit es auf Smartphone funktioniert ??? */
   margin: auto; /* richtet die Lightbox mittig auf der Seite aus */
   border: 3px solid white;
   border-radius: 16px;
