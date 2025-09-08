@@ -37,18 +37,11 @@
   transform: scale(0.95);
 }
 
-/* .photo_preview_btn {
-  all: unset;           
-  display: flex;
-  cursor: pointer;
-} */
-
-
 /***** Dialog/Lightbox *****/
 
 .lightbox {
   width: 600px;
-  max-width: 95%; /* NICHT vw! damit es auf Smartphone funktioniert ??? */
+  max-width: 95%; /* NICHT vw! damit es auf Smartphone funktioniert */
   margin: auto; /* richtet die Lightbox mittig auf der Seite aus */
   border: 3px solid white;
   border-radius: 16px;

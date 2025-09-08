@@ -34,7 +34,7 @@ let currentPhotoIndex = 0; // wird unten für das Durchklicken der Fotos benöti
 
 function renderPhotoPreviewGallery() {
   let photoPreviewGallery = document.getElementById("photo_preview_gallery");
-  photoPreviewGallery.innerHTML = ""; // brauche ich die Leerung???
+  photoPreviewGallery.innerHTML = ""; 
 
   for (let i = 0; i < PHOTOS.length; i++) {
     photoPreviewGallery.innerHTML += getPhotoPreviewGalleryTemplate(i);
